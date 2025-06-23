@@ -1,35 +1,23 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import "./style.css";
+import rows from "./components/rows";
 
-const App = () => {
+
+const App = (props) => {
   return (
     <div className="app">
-       <h1>Grid Maker</h1>
+      <h1>Grid Maker</h1>
       <table>
         <tbody>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
+          {props.rows}
         </tbody>
       </table>
       <div>
-        <button id="add-row">Add Row</button>
-        <button id="delete-row">Delete Row</button> 
+        <button onClick={props.addRow} id="add-row">Add Row</button>
+        <button id="delete-row">Delete Row</button>
         <button id="add-column">Add Column</button>
-         <button id="delete-column">Delete Column</button>
+        <button id="delete-column">Delete Column</button>
         <select id="color-select">
           <option value="red">Red</option>
           <option value="blue">Blue</option>
