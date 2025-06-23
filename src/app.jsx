@@ -36,6 +36,7 @@ function App() {
       setGrid(grid.map(row => row.slice(0, -1)));
     }
   }
+  const [selectedCell, setSelectedCell] = React.useState("red");
 
   return (
     <div className="app">
@@ -46,6 +47,24 @@ function App() {
         <button onClick={deleteRow}>Delete Row</button>
         <button onClick={addColumn}>Add Column</button>
         <button onClick={deleteColumn}>Delete Column</button>
+        <select value ={selectedCell} onChange={(e) => setSelectedCell(e.target.value)}>
+          <option value="red">Red</option> 
+          <option value="green">Green</option>
+          <option value="blue">Blue</option>
+          <option value="yellow">Yellow</option>
+          <option value="purple">Purple</option>
+          <option value="orange">Orange</option>
+          <option value="pink">Pink</option>
+          <option value="black">Black</option>
+          <option value="white">White</option>
+          <option value="gray">Gray</option>
+          <option value="brown">Brown</option>
+          <option value="cyan">Cyan</option>
+          <option value="magenta">Magenta</option>
+          <option value="lime">Lime</option>
+          <option value="teal">Teal</option>
+          <option value="navy">Navy</option>
+        </select>
     </div>
 
     <table className="grid">
