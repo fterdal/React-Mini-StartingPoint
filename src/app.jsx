@@ -8,6 +8,43 @@ const App = () => {
 
 
 
+
+
+
+
+  const handleColorChange = (event) => {
+        setSelectedColor(event.target.value);
+    };
+
+    const handleCellClick = (rowIndex, colIndex) => {
+        setGrid(prevGrid => {
+            const newGrid = prevGrid.map((row, rIdx) =>
+                row.map((cellColor, cIdx) => {
+                    if (rIdx === rowIndex && cIdx === colIndex) {
+                        return selectedColor;
+                    }
+                    return cellColor;
+                })
+            );
+            return newGrid;
+        });
+    };
+
+    const fillUncoloredCells = () => {
+        setGrid(prevGrid => {
+            const newGrid = prevGrid.map(row =>
+                row.map(cellColor =>
+                    cellColor === 'white' ? selectedColor : cellColor
+                )
+            );
+            return newGrid;
+        });
+    };
+
+
+
+
+    
     return (
         <div className="app">
             <h1>Grid Maker</h1>
