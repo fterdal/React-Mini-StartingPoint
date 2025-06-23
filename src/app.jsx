@@ -70,7 +70,12 @@ function App() {
     <table className="grid">
       <tbody>
         {grid.map((row, rowIndex) => (
-          <tr key={rowIndex}>
+          <tr key={rowIndex} style={{ backgroundColor: selectedCell }}
+          onClick={() => {
+            const newColors = [...grid];
+            newColors[rowIndex] = row.map(() => selectedCell);
+            setGrid(newColors);
+          }}>
             {row.map((cell, cellIndex) => (
               <td key={cellIndex}>
                 <input
