@@ -24,3 +24,28 @@ body {
   justify-content: center;
   min-height: 100vh;
 }
+.table {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  color: black;
+}
+.grid {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: auto;
+  color: black;
+  font-size: 1.2rem;
+}
+
+/* Td for square grid */
+td input {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ccc;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  background-color: white;
+}
