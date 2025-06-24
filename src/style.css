@@ -40,7 +40,7 @@ body {
 }
 
 /* Td for square grid */
-td input {
+td {
   width: 40px;
   height: 40px;
   border: 1px solid #ccc;
@@ -49,3 +49,27 @@ td input {
   margin: 0;
   background-color: white;
 }
+/* Container for button group */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Styles for individual buttons */
+.button {
+  background: rgb(255, 255, 255);
+  color: black;
+  padding: 12px 20px;
+  margin: 6px;
+  border: none;
+  border-radius: 12px; /* more roundness */
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  letter-spacing: 2px;
+}
+
